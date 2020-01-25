@@ -1,0 +1,34 @@
+body {
+    margin: 0px;
+}
+
+nav {
+    background-color: #0277BD;
+    padding: max(2vh, 12px) 30px 0px;
+    height: max(7vh, 45px);
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+}
+
+nav>a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: max(4vh, 30px);
+    font-family: arial narrow;
+}
+
+nav>a:hover{
+    color: #bbbbbb;
+}
+
+body>footer {
+    height: max(5vh, 35px);
+    background-color: #bbbbbb;
+}
+
+#main-content{
+    min-height: max(86vh, 500px);
+}
