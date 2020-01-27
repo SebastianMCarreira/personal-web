@@ -10,7 +10,7 @@
 }
 
 #landing-image{
-    width: max(100%, 1000px);
+    width: max(100vw, 200vh);
     margin: 0%;
 }
 
@@ -25,12 +25,11 @@
 
 #landing-quote{
     margin: 40vh auto 0;
-    height: max(20vh, 130px);
+    height: max(15vh, 130px);
     width: min(100%, 500px);
-    border-radius: max(20vh, 20px);
-    background-color: #f5f5f5d9; 
+    border-radius: max(7.5vh, 100px);
+    background-color: #f5f5f5eb; 
     padding: 2vh;
-    font-family: verdana;
 }
 
 @media screen and (max-width: 500px){
@@ -42,4 +41,41 @@
 #landing-quote>blockquote>p{
     font-style: oblique;
     font-size: 20px;
+    font-weight: bold;
+}
+
+#profile{
+    width: 100%;
+}
+
+#profile-picture{
+    width: max(15vw,200px);
+    margin: -15vh auto 0;
+}
+
+#profile-picture>img{
+    width: max(15vw,200px);
+    border: white solid 10px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#profile-text{
+    margin: -50px 0 0;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-field{
+    font-weight: bold;
+    text-align: right;
+}
+
+.profile-column{
+    width: 45%;
+}
+
+h2{
+    text-align: right;
 }

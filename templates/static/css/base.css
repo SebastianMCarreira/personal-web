@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    font-family: century gothic;
 }
 
 nav {
@@ -14,10 +15,8 @@ nav {
 nav>a{
     text-decoration: none;
     color: white;
-    font-weight: bold;
     margin-right: 20px;
     font-size: max(4vh, 30px);
-    font-family: arial narrow;
 }
 
 nav>a:hover{
