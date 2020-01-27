@@ -1,0 +1,42 @@
+#main-content>div{
+    padding: 10px 20%;
+    border-bottom: #dcdcdc solid 1px;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    vertical-align: top;
+    padding-top: 5px;
+}
+
+.experience-field{
+    font-weight: bold;
+    text-align: right;
+}
+
+.icon{
+    width: 40px;
+}
+
+.icon-sm{
+    width: 30px;
+}
+
+#tech-col-2-sm{
+    display: none;
+}
+
+@media screen and (max-width:890px){
+    #tech-col-2-sm{
+        display: block;
+    }
+    #tech-col-2-xl{
+        display: none;
+    }
+    #prog-col-2{
+        display: none;
+    }
+}

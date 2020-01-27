@@ -2,22 +2,29 @@
 {% block title %}Resume{% endblock title %}
 {% block content %}
 <div id="technologies">
-    <h2>Technologies</h2>
+    <h2><img src="{{static_host}}/static/img/technology.png" alt="Technology" class="icon"> Technologies</h2>
     <table>
         <tr>
-            <td><h3>Infrastructure & Cloud</h3></td>
+            <td colspan="2"><h3><img src="{{static_host}}/static/img/cloud.png" alt="Cloud" class="icon-sm"> <span>Infrastructure & Cloud</span></h3></td>
         </tr>
         <tr>
-            <td>
+            <td colspan="2">
                 <ul>
                     <li>Amazon Web Services</li>
                     <li>Kubernetes</li>
                     <li>Docker</li>
                     <li>VMware vSphere</li>
                     <li>VMware NSX</li>
+                    <div id="tech-col-2-sm">
+                        <li>VMware vRealize Orchestrator</li>
+                        <li>VMware vRealize Operations</li>
+                        <li>VMware vRealize Automation</li>
+                        <li>Veeam Backup & Replication</li>
+                        <li>Microsoft Hyper-V</li>
+                    </div>
                 </ul>
             </td>
-            <td>
+            <td id="tech-col-2-xl">
                 <ul>
                     <li>VMware vRealize Orchestrator</li>
                     <li>VMware vRealize Operations</li>
@@ -28,7 +35,7 @@
             </td>
         </tr>
         <tr>
-            <td><h3>Programming</h3></td>
+            <td><h3><img src="{{static_host}}/static/img/programming.png" alt="Programming" class="icon-sm"> Programming</h3></td>
         </tr>
         <tr>
             <td>
@@ -41,6 +48,7 @@
                     <li>Java</li>
                 </ul>
             </td>
+            <td id="prog-col-2"></td>
             <td>
                 <h4>Frameworks</h4>
                 <ul>
@@ -54,7 +62,7 @@
         </tr>
         <tr>
             <td>
-                <h3>Other</h3>
+                <h3><img src="{{static_host}}/static/img/other-tech.png" alt="Other" class="icon-sm"> Other</h3>
                 <ul>
                     <li>Git</li>
                     <li>Ansible</li>
@@ -66,8 +74,8 @@
     </table>
 </div>
 <div id="experience">
-    <h2>Experience</h2>
-    <h3>Wetcom</h3>
+    <h2><img src="{{static_host}}/static/img/work.png" alt="Work" class="icon"> Experience</h2>
+    <h3><img src="{{static_host}}/static/img/wetcom.png" alt="Wetcom" class="icon-sm"> Wetcom</h3>
     <table>
         <tr>
             <td class="experience-field">Period:</td><td>March 2018 - Present</td>
@@ -79,52 +87,55 @@
             <td class="experience-field">Responsibilities:</td><td>Designing, optimizing, automating and documenting IT operations. Developing software solutions.</td>
         </tr>
         <tr>
-            <td class="experience-field">Achievements:</td><td>Transforming 50 manhours per day invested in IT operations into 10 manhourse through optimization and automation. Adoption of new technologies like Docker, Ansible and Kubernetes.</td>
+            <td class="experience-field">Achievements:</td><td>Transforming 50 manhours/day invested in IT operations into 10 manhours/day through optimization and automation. Adoption of new technologies like Docker, Ansible and Kubernetes.</td>
         </tr>
     </table>
 </div>
 <div id="certifications">
-    <h2>Certifications</h2>
+    <h2><img src="{{static_host}}/static/img/certifications.png" alt="Certifications" class="icon"> Certifications</h2>
     <div class="certification">
         <img src="{{static_host}}/static/img/windows-server.png" alt="">
-        <h3>Microsoft 70-740</h3>
+        <h3><img src="{{static_host}}/static/img/cert.png" alt="Cert" class="icon-sm"> Microsoft 70-740</h3>
     </div>
 </div>
 <div id="languages">
-    <h2>Languages</h2>
+    <h2><img src="{{static_host}}/static/img/languages.png" alt="Languages" class="icon"> Languages</h2>
     <div class="language">
-        <h3>Spanish</h3>
-        <p>Native speaker</p>
+        <h3><img src="{{static_host}}/static/img/spanish.png" alt="Spanish" class="icon-sm"> Spanish</h3>
+        <p>Native speaker.</p>
     </div>
     <div class="language">
-        <h3>English</h3>
-        <p>Fluent speaker. Ease and experience holding spoken conversations with native english speakers. Reading and writting in english everyday.</p>
+        <h3><img src="{{static_host}}/static/img/english.png" alt="English" class="icon-sm"> English</h3>
+        <p>Fluent speaker. Ease and experience holding spoken conversations with native english speakers. I read, write and listen in english in a daily basis without any trouble.</p>
     </div>
     <div class="language">
-        <h3>Russian</h3>
-        <p>Basic experience. Completed the elementary TEL/A1 level year at <a href="http://arg.rs.gov.ru/es/about">Casa de Rusia</a>.</p>
+        <h3><img src="{{static_host}}/static/img/russian.png" alt="Russian" class="icon-sm"> Russian</h3>
+        <p>Basic experience. Completed the elementary level TEL/A1 course at <a href="http://arg.rs.gov.ru/es/about">Casa de Rusia</a>.</p>
     </div>
 </div>
 <div id="education">
-    <h2>Education</h2>
+    <h2><img src="{{static_host}}/static/img/education.png" alt="Education" class="icon"> Education</h2>
     <div class="education">
-        <h3>System Analyst Associate Degree</h3>
+        <h3><img src="{{static_host}}/static/img/analyst.png" alt="Analyst" class="icon-sm"> System Analyst Associate Degree</h3>
         <span>ORT Technology Institute of Argentina</span>
         <footer>March 2019 - Present</footer>
     </div>
     <div class="education">
-        <h3>TEL/A1 Elementary Russian Language Level</h3>
+        <h3><img src="{{static_host}}/static/img/russian.png" alt="Russian" class="icon-sm"> TEL/A1 Elementary Russian Language Level</h3>
         <span>Casa de Rusia</span>
         <footer>March 2014 - December 2014</footer>
     </div>
     <div class="education">
-        <h3>Electronic Technician</h3>
+        <h3><img src="{{static_host}}/static/img/electronics.png" alt="Electronics" class="icon-sm"> Electronic Technician</h3>
         <span>Pio IX High School of Buenos Aires</span>
         <footer>March 2010 - November 2016</footer>
     </div>
 </div>
 <div id="hobbies">
-    <h2>Hobbies</h2>
+    <h2><img src="{{static_host}}/static/img/hobbies.png" alt="Hobbies" class="icon"> Hobbies</h2>
     <p>Apart from technology, I enjoy learning history (mainly interested in the XVIII to XX centuries), playing music (electric bass, armonica and piano), watching football (River Plate fan) and video gaming.</p>
 </div>
 {% endblock content %}
+{% block css %}
+<link rel="stylesheet" href="{{static_host}}/static/css/resume.css" type="text/css">
+{% endblock css %}
