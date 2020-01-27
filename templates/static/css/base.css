@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0px;
     font-family: century gothic;
@@ -25,7 +29,8 @@ nav>a:hover{
 
 body>footer {
     height: max(5vh, 35px);
-    background-color: #bbbbbb;
+    background-color: #dcdcdc;
+    padding: max(1.5vh, 0.5em) 5% 0;
 }
 
 #main-content{

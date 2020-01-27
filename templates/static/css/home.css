@@ -79,3 +79,35 @@
 h2{
     text-align: right;
 }
+
+@media screen and (max-width: 900px){
+    #profile-text{
+        display: block;
+        padding: 0 5%;
+        margin: 0px;
+    }
+    .profile-column{
+        width: 100%;
+    }
+    h2{
+        text-align: left;
+    }
+    #profile-left{
+        border-bottom: #bbbbbb solid 1px;
+        padding-bottom: 20px;
+    }
+}
+
+#other-media{
+    border-top: #bbb solid 1px;
+    padding: 50px 10%;
+}
+
+#media-links{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img.media{
+    height: 40px;
+}
