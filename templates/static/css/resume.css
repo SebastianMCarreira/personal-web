@@ -63,9 +63,14 @@ h2{
     padding: 10px 5%;
 }
 
-.certification>h3{
-    width: 80%;
+.cert-icon{
+    float: left;
+}
+
+.certification>h4{
+    padding: 10px 15px 0 15px;
     margin: 0 auto;
+    text-align: right;
 }
 
 .flex-break{
