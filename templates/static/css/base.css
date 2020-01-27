@@ -16,8 +16,12 @@ nav {
     z-index: 20;
 }
 
-nav>a{
+a{
     text-decoration: none;
+    color: black;
+}
+
+nav>a{
     color: white;
     margin-right: 20px;
     font-size: max(4vh, 30px);
@@ -34,5 +38,5 @@ body>footer {
 }
 
 #main-content{
-    min-height: max(86vh, 500px);
+    min-height: max(79vh, 500px);
 }

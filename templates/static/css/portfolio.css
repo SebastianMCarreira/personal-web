@@ -1,0 +1,48 @@
+#main-content{
+    padding: 20px 10%;
+}
+
+#portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project{
+    height: min(30vw, 370px);
+    border-radius: 10px;
+    border: #aaa solid 2px;
+    box-shadow: 4px 4px 8px 0px gray;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 35vw;
+}
+
+.project>img{
+    width: 100%;
+    border-bottom: #aaa solid 2px;
+}
+
+.project>div{
+    padding: 5px 10px;
+}
+
+.flex-break{
+    flex-basis: 10%;
+    height: 20px;
+}
+
+@media screen and (max-width:1000px){
+    .flex-break{
+        flex-basis: 100%;
+    }
+    .project{
+        max-width: 80vw;
+        height: min(55vw, 450px);
+    }
+}
+
+@media screen and (max-width:620px){
+    .project{
+        height: max(60vw, 310px);
+    }
+}

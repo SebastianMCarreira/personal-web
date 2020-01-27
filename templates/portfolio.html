@@ -1,5 +1,30 @@
 {% extends "_base.html" %}
 {% block title %}Porfolio{% endblock title %}
 {% block content %}
-Porfolio
+<h1>Porfolio</h1>
+<p>Here is a list of small projects I built where I explain how they work and why I took certain design choices.</p>
+<div id="portfolio-list">
+    <a href="{{site_host}}/portfolio/personal-web.html">
+        <div class="project">
+            <img src="{{site_host}}/static/img/personal-web.png" alt="Personal Web">
+            <div>
+                <h4>Personal Website</h4>
+                <p>A static site to work as online resume for people to known me and the backbone of my auto-deployment architecture.</p>
+            </div>
+        </div>
+    </a>
+    <div class="flex-break"></div>
+    <!-- <a href="{{site_host}}/portfolio/personal-web.html">
+        <div class="project">
+            <img src="{{site_host}}/static/img/personal-web.png" alt="Personal Web">
+            <div>
+                <h4>Personal Website</h4>
+                <p>A static site to work as online resume for people to known me and the backbone of my auto-deployment architecture.</p>
+            </div>
+        </div>
+    </a> -->
+</div>
 {% endblock content %}
+{% block css %}
+<link rel="stylesheet" href="{{site_host}}/static/css/portfolio.css" type="text/css">
+{% endblock css %}

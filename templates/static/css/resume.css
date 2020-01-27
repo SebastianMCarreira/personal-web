@@ -55,9 +55,10 @@ h2{
     border-radius: 10px;
     border: #aaa solid 2px;
     width: 30%;
+    box-shadow: 4px 4px 8px 0px gray;
 }
 
-.certification>img{
+.certification>a>img{
     width: 90%;
     border-bottom: #aaa solid 2px;
     padding: 10px 5%;
@@ -67,7 +68,7 @@ h2{
     float: left;
 }
 
-.certification>h4{
+.certification>a>h4{
     padding: 10px 15px 0 15px;
     margin: 0 auto;
     text-align: right;
