@@ -9,8 +9,8 @@ body {
 
 nav {
     background-color: #0277BD;
-    padding: max(2vh, 12px) 30px 0px;
-    height: max(7vh, 45px);
+    padding: 10px 30px 0px;
+    height: 55px;
     position: sticky;
     top: 0px;
     z-index: 20;
@@ -24,7 +24,7 @@ a{
 nav>a{
     color: white;
     margin-right: 20px;
-    font-size: max(4vh, 30px);
+    font-size: 35px;
 }
 
 nav>a:hover{
@@ -32,11 +32,21 @@ nav>a:hover{
 }
 
 body>footer {
-    height: max(5vh, 35px);
+    height: 35px;
     background-color: #dcdcdc;
-    padding: max(1.5vh, 0.5em) 10% 0;
+    padding: 0.8em 10% 0;
 }
 
 #main-content{
-    min-height: max(79vh, 500px);
+    min-height: 80vh;
+}
+
+@media screen and (max-width:750px){
+    nav>a{
+        margin-right: 10px;
+        font-size: 30px;
+    }
+    nav{
+        height: 45px;
+    }
 }

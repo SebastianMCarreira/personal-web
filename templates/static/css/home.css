@@ -10,7 +10,7 @@
 }
 
 #landing-image{
-    width: max(100vw, 200vh);
+    width: 100vw;
     margin: 0%;
 }
 
@@ -25,18 +25,13 @@
 
 #landing-quote{
     margin: 40vh auto 0;
-    height: max(15vh, 130px);
-    width: min(100%, 500px);
-    border-radius: max(7.5vh, 100px);
+    height: 150px;
+    width: 500px;
+    border-radius: 75px;
     background-color: #f5f5f5eb; 
     padding: 2vh;
 }
 
-@media screen and (max-width: 500px){
-    #landing-quote{
-        border-radius: 0px;
-    }
-}
 
 #landing-quote>blockquote>p{
     font-style: oblique;
@@ -49,12 +44,12 @@
 }
 
 #profile-picture{
-    width: max(15vw,200px);
+    width: 250px;
     margin: -15vh auto 0;
 }
 
 #profile-picture>img{
-    width: max(15vw,200px);
+    width: 250px;
     border: white solid 10px;
     border-radius: 50%;
     background-color: white;
@@ -80,24 +75,6 @@ h2{
     text-align: right;
 }
 
-@media screen and (max-width: 900px){
-    #profile-text{
-        display: block;
-        padding: 0 5%;
-        margin: 0px;
-    }
-    .profile-column{
-        width: 100%;
-    }
-    h2{
-        text-align: left;
-    }
-    #profile-left{
-        border-bottom: #bbbbbb solid 1px;
-        padding-bottom: 20px;
-    }
-}
-
 #other-media{
     border-top: #bbb solid 1px;
     padding: 50px 10%;
@@ -110,4 +87,45 @@ h2{
 
 img.media{
     height: 40px;
+}
+
+@media screen and (max-width: 1300px){
+    #landing-image{
+        width: 150vw;
+    }
+}
+
+@media screen and (max-width: 900px){
+    #landing-image{
+        width: 200vw;
+    }
+    
+    #profile-text{
+        display: block;
+        padding: 0 5%;
+        margin: 0px;
+    }
+
+    .profile-column{
+        width: 100%;
+    }
+
+    h2{
+        text-align: left;
+    }
+
+    #profile-left{
+        border-bottom: #bbbbbb solid 1px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:650px){
+    #landing-image{
+        width: 300vw;
+    }
+    #landing-quote{
+        border-radius: 0px;
+        width: 100%;
+    }
 }
