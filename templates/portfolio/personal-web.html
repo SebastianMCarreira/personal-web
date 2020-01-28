@@ -1,5 +1,103 @@
 {% extends "_base.html" %}
 {% block title %}Porfolio{% endblock title %}
 {% block content %}
-<h1>Personal Web</h1>
+<h1>Personal Website</h1>
+<img src="{{site_host}}/static/img/personal-web.png" alt="Personal Website">
+<h3>Description</h3>
+<p>A static site to work as online resume for people to known me and the backbone of my auto-deployment architecture. Also, this makes my website a recursive website. Which I think it's pretty cool to say.</p>
+<h3>Services & Technologies Used</h3>
+<ul>
+    <li>Route 53</li>
+    <li>CloudFront</li>
+    <li>S3</li>
+    <li>CodePipeline</li>
+    <li>StaticJinja</li>
+</ul>
+<h3>How it works</h3>
+<img src="{{site_host}}/static/img/personal-web-diagram.jpg" alt="Diagram">
+<ol>
+    <li>A commit to the CodeCommit repository master branch triggers the CodePipeline workflow.</li>
+    <li>CodeBuild transforms the templates into the static html files. Also css and js is minified to reduce storage footprint.</li>
+    <li>CodeDeploy sends the static files to the bucket test.sebastiancarreira.com where it's served as a S3 static website.</li>
+    <li>I manually check the test website for errors in the public bucket URL. Once everything is checked, the pipeline continues.</li>
+    <li>CodeDeploy sends the static files to the bucket sebastiancarreira.com where it's served as a S3 static website.</li>
+    <li>A Route 53 hosted zone maps the sebastiancarreira.com name to the sebastiancarreira.com bucket public URL name.</li>
+    <li>CloudFront keeps cached the static content of the site for quick loads in other parts of the world.</li>
+    <li>S3 maps the sebastiancarreira.com bucket public URL to the static site served by it.</li>
+</ol>
+<h3>Why did I make a static website in 2020?</h3>
+<p>
+    Nowdays, with frameworks like Flak or Express.js, one can make a dynamic website in mere minutes, literally. All with templates and fetching data from some database.
+    So, why doing a static website today? It sounds so vintage sometimes. But people sometimes forget the strengths of static websites and underestimate the costs of keeping
+    a dynamic website running.
+</p>
+<p>
+    Since all of my content is running in AWS. I need to be smart to keep my costs as low as possible (and within the free tier, if possible) while making my content alwasy
+    available. A dynamic website runnign 24/7/52 would mean having (at least) one EC2 instance running an application all that time, something which consumes all of
+    the free tier credit for EC2 (making anything else I do over the month with EC2 cost money) or adds like $8 a month to my costs. I could also go serverless and use Lambda,
+    but I also want to play with it and use Lambda for many other things where serverless actually excells, and using it to handle the backend for this website would mean I
+    risk going over my free tier limit too.
+</p>
+<p>
+    Regardless of that, the main question is the following: Is the content static or dynamic? The answer is kind of relative. Technically every site is somewhat dynamic
+    (unless someone hasn't updated a website since 1995). This page content will definetly change over time. I will add new projects, update existing ones, and probably change
+    some things in the Home and Resume sections. But all of those changes will be done by me, both the sole owner of the site and someone who likes to write documents in HTML.
+    Also, almost no information appears in two places of the site, using placeholders to insert that data would help very little. So, if I made this site dynamic, I would earn
+    the ability to edit (some of) it's content in a "friendlier" UI and maybe some data won't be duplicated. On the other hand, I'm getting the trouble of mantaining a backend
+    to serve the site, and that comes not only with costs, but with security precautions too.
+</p>
+<p>
+    So I choosed to make the site static. AWS offers the ability to serve a static website straigth from a S3 bucket and the only things that you get charged for are the storage
+    it uses, the GET requests it performs, and the PUT requests I perform. Additionally, CloudFront helps to make the site quick and available in other parts of the world for
+    international visitors.
+</p>
+<ul>
+    <li>
+        Storage: this is almost laughable. AWS charges S3 storage by GB and it literally charges a few cents per GB stored. This website will probably never weight more than 2MB,
+        that's less than .2% of the storage I will have to pay to even use S3. And if we are talking about the free tier, I get 5GB for free for the first 12 months, so I'm not even
+        paying for that at the moment.
+    </li>
+    <li>
+        GET Requests: Visitors will use up this resource over time. However, the requests are counted by the literal thousands and AWS charges like $0.0005 per 1000 GET. That's really
+        low, at least for a small website with very few monthly visitors like this one. I would need like 18000 GET requests to reach just 1% of what I'm paying for the domain, I'm
+        pretty sure I won't reach those numbers for a long time. Meanwhile, the free tier covers the first 20000 GET requests for the first 12 months. In addition to all this, CloudFront
+        will cache most of these requests anyway.
+    </li>
+    <li>
+        PUT Requests: I will use these to update the site. However, we are talking about less than 50 PUT requests per update, while these are also charged by the thousand ($0.0007 per 1000 PUT).
+        So I would have to update this site 20 times a month to even get above 1 cent, and I won't update it so many times. The AWS free tier also covers the first 2000 PUT for the first 12 months. 
+    </li>
+    <li>
+        CloudFront: Making possible visitors from other parts of the world (not South America, where the site is currently hosted) wait for the data to be transferred from there to their
+        geographical location is inadmissible. For this, CloudFront will keep cached the site in other AWS sites, shortening the distance between my possible international visitors and this
+        website's content. CloudFront is not that cheap, but because this site is actually pretty small I know this site will stay below the first GB of transfer, meaning something like $0.085
+        a month. HTTP requests will also not go above the first 10000 (at least for a long time) so I will have to pay around $0.0075 per month for that.
+    </li>
+</ul>
+<h3>Why StaticJinja and not some other more popular SSG like Hugo or Jekyll?</h3>
+<p>
+    The short answer is, I didn't want to learn how to use them for this.
+</p>
+<p>
+    I love learning about technology. But learning a new framework is usually pretty cumbersome, while SSG aren't exactly very exiting to learn (at least for me). I never used one before making this site, all
+    of my experience making websites was with dynamic websites or literally one page. So I went to the Internet looking what SSG I should use, how to use them and so on. I started a Hugo tutorial
+    and began scaffolding this page but, while I was reading documentation I tought "Why can't I use something like Jinja in Flask, that takes some templates and outputs the html files like that?".
+    So I googled "static site generator jinja" and one of the first links was the <a href="https://github.com/Ceasar/staticjinja">StaticJinja</a> repository in GitHub, the first 3 paragraphs of
+    it's README were literally what I was thinking about:
+</p>
+<blockquote>
+    <p>StaticJinja is a library that makes it easy to build static sites using Jinja2.</p>
+    <p>Many static site generators are complex, with long manuals and unnecessary features. But using template engines to build static websites is really useful.</p>
+    <p>StaticJinja is designed to be lightweight (under 500 lines of source code), and to be easy to use, learn, and extend, enabling you to focus on making your site.</p>
+</blockquote>
+<p>
+    Using it was extremely easy. The documentation is straightfoward and short and it had all the features I needed. It's not perfect (I'm thinking about contributing) but it get's the job done.
+    Also, I could use all of the Jinja syntax I'm so familiar with from working with Flask and Django.
+</p>
+<p>
+    In the end, all SSG output the same stuff, a bunch of HTML files (and maybe other static files too). Coming from Hugo or StaticJinja won't make it look much different.
+</p>
 {% endblock content %}
+{% block css %}
+<link rel="stylesheet" href="{{site_host}}/static/css/portfolio-project.css" type="text/css">
+{% endblock css %}
