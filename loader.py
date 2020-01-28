@@ -1,12 +1,16 @@
 from staticjinja import Site
+import os
+
+SITE_HOST = os.environ.get("SITE_HOST",default=".")
+OUTPATH = os.environ.get("OUTPATH",default="../personal-web-out")
 
 if __name__ == "__main__":
     site = Site.make_site(
         env_globals={
-            "site_host":"file:///C:/Users/Sebastián/Desktop/Coding/personal-web-out"
+            "site_host":SITE_HOST
         },
         searchpath="./templates",
-        outpath="../personal-web-out",
+        outpath=OUTPATH,
         staticpaths=["static/"]
     )
     site.render()
