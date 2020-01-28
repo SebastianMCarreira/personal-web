@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    background-color: #dcdcdc;
 }
 
 body {
@@ -34,11 +35,18 @@ nav>a:hover{
 body>footer {
     height: 35px;
     background-color: #dcdcdc;
+    font-weight: bold;
     padding: 0.8em 10% 0;
 }
 
 #main-content{
     min-height: 80vh;
+    background-color: white;
+}
+
+#main-content a{
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 @media screen and (max-width:750px){

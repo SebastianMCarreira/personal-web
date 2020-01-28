@@ -1,0 +1,32 @@
+#description{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#main-img{
+    width: 30vw;
+    margin-right: 10px;
+}
+
+.section{
+    border-top: #bbb solid 1px;
+    padding: 10px 15%;
+}
+
+#explanation{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#diagram{
+    width: 500px;
+    height: 342px;
+}
+
+blockquote{
+    margin: 5px 10%;
+    padding: 5px;
+    background-color: #dcdcdc;
+    font-weight: bold;
+    font-style: italic;
+}
