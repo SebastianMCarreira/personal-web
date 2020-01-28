@@ -1,0 +1,29 @@
+version: 0.2
+env:
+  variables:
+     APPVERSION: "0.1.0"
+     OUTPATH: "."
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+  pre_build:
+    commands:
+       - echo Installing requirements
+       - pip install -r requirements.txt
+  build:
+    commands:
+       - python3 loader.py
+  post_build:
+    commands:
+       - rm loader.py
+       - rm requirements.txt
+       - rm -rf templates
+       - echo "Static site generated"
+artifacts:
+  type: zip
+  files:
+    - ./*
+    - ./*/*
+    - ./static/*/*
+  name: personal-web-$APPVERSION-$CODEBUILD_BUILD_ID
