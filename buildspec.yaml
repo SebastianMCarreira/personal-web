@@ -11,6 +11,8 @@ phases:
     commands:
        - echo Installing requirements
        - pip install -r requirements.txt
+       - export APPVERSION = $APPVERSION
+       - export OUTPATH = $OUTPATH
   build:
     commands:
        - python3 loader.py
