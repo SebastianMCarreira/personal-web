@@ -125,3 +125,9 @@ img.media{
         height: 150px;
     }
 }
+
+@media screen and (max-width: 400px){
+    #landing-quote{
+        height: 170px;
+    }
+}
