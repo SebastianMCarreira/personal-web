@@ -3,9 +3,10 @@
 {% block content %}
 <div class="section">
     <h1>Personal Website</h1>
-    <div id="description">
-        <img src="{{site_path}}/static/img/personal-web.png" alt="Personal Website" id="main-img">
-        <div>
+    <div id="description" class="flex-section">
+        <img src="/static/img/personal-web.png" alt="Personal Website" id="main-img">
+        <div class="flex-break"></div>
+        <div class="flex-text">
             <h3>Description</h3>
             <p>A static site to work as online resume for people to known me and the backbone of my auto-deployment
                 architecture. Also, this makes my website a recursive website. Which I think it's pretty cool to say.</p>
@@ -14,9 +15,10 @@
 </div>
 <div class="section">
     <h3>How it works</h3>
-    <div id="explanation">
-        <img src="{{site_path}}/static/img/personal-web-diagram.jpg" alt="Diagram" id="diagram">
-        <div>
+    <div id="explanation" class="flex-section">
+        <img src="/static/img/personal-web-diagram.jpg" alt="Diagram" id="diagram">
+        <div class="flex-break"></div>
+        <div class="flex-text">
             <ol>
                 <li>A commit to the CodeCommit repository master branch triggers the CodePipeline workflow.</li>
                 <li>CodeBuild transforms the templates into the static html files. Also css and js is minified to reduce storage
@@ -25,12 +27,12 @@
                     website.</li>
                 <li>I manually check the test website for errors in the public bucket URL. Once everything is checked, the pipeline
                     continues.</li>
-                <li>CodeDeploy sends the static files to the bucket sebastiancarreira.com where it's served as a S3 static website.
+                <li>CodeDeploy sends the static files to the bucket me.sebastiancarreira.com where it's served as a S3 static website.
                     </li>
-                <li>A Route 53 hosted zone maps the sebastiancarreira.com name to the sebastiancarreira.com bucket public URL name.
+                <li>A Route 53 hosted zone maps the me.sebastiancarreira.com name to the me.sebastiancarreira.com bucket public URL name.
                 </li>
                 <li>CloudFront keeps cached the static content of the site for quick loads in other parts of the world.</li>
-                <li>S3 maps the sebastiancarreira.com bucket public URL to the static site served by it.</li>
+                <li>S3 maps the me.sebastiancarreira.com bucket public URL to the static site served by it.</li>
             </ol>
         </div>
     </div>
@@ -153,5 +155,5 @@
 </div>
 {% endblock content %}
 {% block css %}
-<link rel="stylesheet" href="{{site_path}}/static/css/portfolio-project.css" type="text/css">
+<link rel="stylesheet" href="/static/css/portfolio-project.css" type="text/css">
 {% endblock css %}

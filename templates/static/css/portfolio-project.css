@@ -1,10 +1,5 @@
-#description{
-    display: flex;
-    justify-content: space-evenly;
-}
-
 #main-img{
-    width: 30vw;
+    width: 300px;
     margin-right: 10px;
 }
 
@@ -13,14 +8,14 @@
     padding: 10px 15%;
 }
 
-#explanation{
+.flex-section{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: nowrap;
 }
 
-#diagram{
-    width: 500px;
-    height: 342px;
+.flex-text{
+    flex-basis: 55%;
 }
 
 blockquote{
@@ -29,4 +24,28 @@ blockquote{
     background-color: #dcdcdc;
     font-weight: bold;
     font-style: italic;
+}
+
+.flex-break{
+    flex-basis: 0%;
+    height: 10px;
+}
+
+#diagram{
+    width: 615px;
+    height: 420px;
+}
+
+@media screen and (max-width:1200px){
+    .flex-section{
+        flex-wrap: wrap;
+    }
+    .flex-break{
+        flex-basis: 100%;
+        height: 10px;
+    }
+    #diagram{
+        width: 70vw;
+        height: 48vw;
+    }
 }

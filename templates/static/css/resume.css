@@ -25,7 +25,6 @@ td{
 
 .experience-field{
     font-weight: bold;
-    text-align: right;
 }
 
 h2{
@@ -77,6 +76,12 @@ h2{
 .flex-break{
     flex-basis: 0%;
     height: 10px;
+}
+
+.education>footer{
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
 }
 
 @media screen and (max-width:1200px){

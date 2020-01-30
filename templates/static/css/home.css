@@ -10,7 +10,8 @@
 }
 
 #landing-image{
-    width: 100vw;
+    width: 165vmax;
+    height: 110vmax;
     margin: 0%;
 }
 
@@ -89,18 +90,11 @@ img.media{
     height: 40px;
 }
 
-@media screen and (max-width: 1300px){
-    #landing-image{
-        width: 165vh;
-        height: 110vh;
-    }
-}
-
 @media screen and (max-width: 900px){
-    #landing-image{
-        width: 200vw;
+    #landing-quote{
+        border-radius: 0px;
+        width: 100%;
     }
-    
     #profile-text{
         display: block;
         padding: 0 5%;
@@ -118,15 +112,5 @@ img.media{
     #profile-left{
         border-bottom: #bbbbbb solid 1px;
         padding-bottom: 20px;
-    }
-}
-
-@media screen and (max-width:650px){
-    #landing-image{
-        width: 300vw;
-    }
-    #landing-quote{
-        border-radius: 0px;
-        width: 100%;
     }
 }

@@ -55,6 +55,16 @@ body>footer {
         font-size: 30px;
     }
     nav{
-        height: 45px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    nav>a{
+        margin-right: 5px;
+        font-size: 20px;
+    }
+    nav{
+        height: 30px;
     }
 }
