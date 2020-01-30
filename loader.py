@@ -3,7 +3,7 @@ import os
 
 OUTPATH = os.environ.get("OUTPATH",default="../personal-web-out")
 APPVERSION = os.environ.get("APPVERSION",default="testBuild")
-ISLOCALDEV = os.environ.get("ISLOCALDEV", default=True)
+ISLOCALDEV = bool(os.environ.get("ISLOCALDEV", default=True))
 
 if __name__ == "__main__":
     site = Site.make_site(

@@ -3,7 +3,7 @@ env:
   variables:
      APPVERSION: "v0.1.1"
      OUTPATH: "."
-     ISLOCALDEV: False
+     ISLOCALDEV: 0
 phases:
   install:
     runtime-versions:
