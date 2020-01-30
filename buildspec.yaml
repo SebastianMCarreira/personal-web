@@ -1,7 +1,7 @@
 version: 0.2
 env:
   variables:
-     APPVERSION: "0.1.0"
+     APPVERSION: "v0.1.0"
      OUTPATH: "."
 phases:
   install:
