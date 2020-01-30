@@ -3,13 +3,13 @@ import os
 
 OUTPATH = os.environ.get("OUTPATH",default="../personal-web-out")
 APPVERSION = os.environ.get("APPVERSION",default="testBuild")
-ISLOCALDEV = bool(os.environ.get("ISLOCALDEV", default=True))
+SITEPATH = os.environ.get("SITEPATH", default=os.path.abspath(OUTPATH))
 
 if __name__ == "__main__":
     site = Site.make_site(
         env_globals={
             "app_version":APPVERSION,
-            "abs_path": os.path.abspath(OUTPATH) if ISLOCALDEV else ""
+            "site_path": SITEPATH
         },
         searchpath="./templates",
         outpath=OUTPATH,

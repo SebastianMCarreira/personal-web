@@ -4,7 +4,7 @@
 <div class="section">
     <h1>Personal Website</h1>
     <div id="description">
-        <img src="{{abs_path}}/static/img/personal-web.png" alt="Personal Website" id="main-img">
+        <img src="{{site_path}}/static/img/personal-web.png" alt="Personal Website" id="main-img">
         <div>
             <h3>Description</h3>
             <p>A static site to work as online resume for people to known me and the backbone of my auto-deployment
@@ -15,7 +15,7 @@
 <div class="section">
     <h3>How it works</h3>
     <div id="explanation">
-        <img src="{{abs_path}}/static/img/personal-web-diagram.jpg" alt="Diagram" id="diagram">
+        <img src="{{site_path}}/static/img/personal-web-diagram.jpg" alt="Diagram" id="diagram">
         <div>
             <ol>
                 <li>A commit to the CodeCommit repository master branch triggers the CodePipeline workflow.</li>
@@ -155,5 +155,5 @@
 </div>
 {% endblock content %}
 {% block css %}
-<link rel="stylesheet" href="{{abs_path}}/static/css/portfolio-project.css" type="text/css">
+<link rel="stylesheet" href="{{site_path}}/static/css/portfolio-project.css" type="text/css">
 {% endblock css %}
