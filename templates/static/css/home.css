@@ -91,7 +91,8 @@ img.media{
 
 @media screen and (max-width: 1300px){
     #landing-image{
-        width: 150vw;
+        width: 165vh;
+        height: 110vh;
     }
 }
 
