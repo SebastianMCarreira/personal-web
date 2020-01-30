@@ -5,7 +5,7 @@ html{
 
 body {
     margin: 0px;
-    font-family: century gothic;
+    font-family: 'Montserrat', 'Century Gothic', sans-serif;
 }
 
 nav {
@@ -55,7 +55,7 @@ body>footer {
         font-size: 30px;
     }
     nav{
-        height: 35px;
+        height: 45px;
     }
 }
 
