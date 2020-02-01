@@ -58,8 +58,8 @@
     </p>
     <p>
         Since all of my content is running in AWS. I need to be smart to keep my costs as low as possible (and within the
-        free tier, if possible) while making my content alwasy
-        available. A dynamic website runnign 24/7/52 would mean having (at least) one EC2 instance running an application
+        free tier, if possible) while making my content always
+        available. A dynamic website running 24/7/52 would mean having (at least) one EC2 instance running an application
         all that time, something which consumes all of
         the free tier credit for EC2 (making anything else I do over the month with EC2 cost money) or adds like $8 a month
         to my costs. I could also go serverless and use Lambda,
@@ -74,7 +74,7 @@
         site and someone who likes to write documents in HTML.
         Also, almost no information appears in two places of the site, using placeholders to insert that data would help
         very little. So, if I made this site dynamic, I would earn
-        the ability to edit (some of) it's content in a "friendlier" UI and maybe some data won't be duplicated. On the
+        the ability to edit (some of) its content in a "friendlier" UI and maybe some data won't be duplicated. On the
         other hand, I'm getting the trouble of mantaining a backend
         to serve the site, and that comes not only with costs, but with security precautions too.
     </p>
@@ -109,7 +109,7 @@
             times. The AWS free tier also covers the first 2000 PUT for the first 12 months.
         </li>
         <li>
-            CloudFront: Making possible visitors from other parts of the world (not South America, where the site is
+            CloudFront: Making possible visitors from other parts of the world (anywhere but South America, where the site is
             currently hosted) wait for the data to be transferred from there to their
             geographical location is inadmissible. For this, CloudFront will keep cached the site in other AWS sites,
             shortening the distance between my possible international visitors and this
@@ -127,14 +127,14 @@
     </p>
     <p>
         I love learning about technology. But learning a new framework is usually pretty cumbersome, while SSG aren't
-        exactly very exiting to learn (at least for me). I never used one before making this site, all
+        exactly very exciting to learn (at least for me). I never used one before making this site, all
         of my experience making websites was with dynamic websites or literally one page. So I went to the Internet looking
         what SSG I should use, how to use them and so on. I started a Hugo tutorial
         and began scaffolding this page but, while I was reading documentation I tought "Why can't I use something like
         Jinja in Flask, that takes some templates and outputs the html files like that?".
         So I googled "static site generator jinja" and one of the first links was the <a
-        href="https://github.com/Ceasar/staticjinja">StaticJinja</a> repository in GitHub, the first 3 paragraphs of
-        it's README were literally what I was thinking about:
+        href="https://github.com/Ceasar/staticjinja" target="_blank">StaticJinja</a> repository in GitHub, the first 3 paragraphs of
+        its README were literally what I was thinking about:
     </p>
     <blockquote>
         <p>StaticJinja is a library that makes it easy to build static sites using Jinja2.</p>
@@ -144,7 +144,7 @@
             extend, enabling you to focus on making your site.</p>
         </blockquote>
     <p>
-        Using it was extremely easy. The documentation is straightfoward and short and it had all the features I needed.
+        Using it was extremely easy. The documentation is straightfoward and it had all the features I needed.
         It's not perfect (I'm thinking about contributing) but it get's the job done.
         Also, I could use all of the Jinja syntax I'm so familiar with from working with Flask and Django.
     </p>

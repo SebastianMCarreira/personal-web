@@ -70,7 +70,7 @@ h2{
 
 .certification>a>h4{
     padding: 10px 15px 0 15px;
-    margin: 0 auto;
+    margin: 0 auto 2em;
     text-align: right;
 }
 
@@ -94,14 +94,14 @@ h2{
         flex-basis: 100%;
     }
     .certification{
-        width: 50%;
+        width: 40%;
     }
     #header-img>img{
         margin: -67px 0px;
     }
 }
 
-@media screen and (max-width:890px){
+@media screen and (max-width:900px){
     #tech-col-2-sm{
         display: block;
     }
@@ -112,7 +112,10 @@ h2{
         display: none;
     }
     .certification{
-        width: 80%;
+        width: 60%;
+    }
+    .certification>a>h4{
+        margin-bottom: 1em;
     }
     #header-img{
         height: auto;

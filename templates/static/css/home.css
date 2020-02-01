@@ -65,20 +65,26 @@
 
 .profile-field{
     font-weight: bold;
-    text-align: right;
+    margin-top: 1em;
+}
+
+.profile-field>img{
+    height: 1em;
+    margin-right: 0.7em;
 }
 
 .profile-column{
     width: 45%;
 }
 
-h2{
+#profile-right>h2{
     text-align: right;
 }
 
 #other-media{
     border-top: #bbb solid 1px;
     padding: 50px 10%;
+    text-align: center;
 }
 
 #media-links{
@@ -90,14 +96,38 @@ img.media{
     height: 40px;
 }
 
+#basic-info{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#more-info{
+    border-top: #bbb solid 1px;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+#more-info>a{
+    text-decoration: none;
+}
+
+#more-info>a>h3>img{
+    height: 30px;
+    margin: 20px 10px 0;
+}
+
 @media screen and (max-width: 1100px){
     #landing-image{
-        margin: 0;
+        margin: -100px 0 0;
     }
 }
 
-
 @media screen and (max-width: 900px){
+    h1, h2, h3{
+        text-align: center!important;
+    }
+
     #profile-text{
         display: block;
         padding: 0 5%;
@@ -108,10 +138,6 @@ img.media{
         width: 100%;
     }
 
-    h2{
-        text-align: left;
-    }
-
     #profile-left{
         border-bottom: #bbbbbb solid 1px;
         padding-bottom: 20px;
@@ -119,6 +145,10 @@ img.media{
 }
 
 @media screen and (max-width:600px){
+    #landing-image{
+        margin: 0;
+    }
+
     #landing-quote{
         border-radius: 0px;
         width: 100%;

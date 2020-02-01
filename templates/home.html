@@ -20,21 +20,15 @@
     </div>
     <div id="profile-text">
         <div id="profile-left" class="profile-column">
-            <h1>Sebastían Matías Carreira</h1>
-            <table>
-                <tr>
-                    <td class="profile-field">Date of birth:</td><td>October 31st, 1996</td>
-                </tr>
-                <tr>
-                    <td class="profile-field">Location:</td><td>Buenos Aires, Argentina</td>
-                </tr>
-                <tr>
-                    <td class="profile-field">Position:</td><td>Integrations Developer at <a href="https://www.wetcom.com/en_US/">Wetcom</a></td>
-                </tr>
-                <tr>
-                    <td class="profile-field">Phone:</td><td>+54 11 3015-0851</td>
-                </tr>
-            </table>
+            <h1>Sebastián Matías Carreira</h1>
+            <div id="basic-info">
+                <div class="profile-field"><img src="/static/img/calendar.png">Date of birth:</div>
+                <div>October 31st, 1996</div>
+                <div class="profile-field"><img src="/static/img/marker.png">Location:</div>
+                <div>Buenos Aires, Argentina</div>
+                <div class="profile-field"><img src="/static/img/suitcase.png">Position:</div>
+                <div>Integrations Developer at <a href="https://www.wetcom.com/en_US/" target="_blank">Wetcom</a></div>
+            </div>
         </div>
         <div id="profile-right" class="profile-column">
             <h2>About me</h2>
@@ -44,19 +38,26 @@
     </div>
 </div>
 <div id="other-media">
-    <h3>Me, in other parts of the internet</h3>
+    <h2>Me, in other parts of the internet</h2>
     <div id="media-links">
         <div>
-            <a href="https://www.linkedin.com/in/sebasti%C3%A1n-mat%C3%ADas-carreira/"><img src="/static/img/linkedin.png" alt="LinkedIn" class="media"></a>
+            <a href="https://www.linkedin.com/in/sebasti%C3%A1n-mat%C3%ADas-carreira/" target="_blank"><img src="/static/img/linkedin.png" alt="LinkedIn" class="media"></a>
         </div>
         <div>
-            <a href="https://github.com/SebastianMCarreira"><img src="/static/img/github.png" alt="GitHub" class="media"></a>
+            <a href="https://github.com/SebastianMCarreira" target="_blank"><img src="/static/img/github.png" alt="GitHub" class="media"></a>
         </div>
         <div>
-            <a href="mailto:sebastian.m.carreira@gmail.com"><img src="/static/img/gmail.png" alt="GitHub" class="media"></a>
+            <a href="mailto:sebastian.m.carreira@gmail.com"><img src="/static/img/gmail.png" alt="Gmail" class="media"></a>
+        </div>
+        <div>
+            <a href="tel:+54-11-3015-0851"><img src="/static/img/phone.png" alt="Phone" class="media"></a>
         </div>
     </div>
-
+</div>
+<div id="more-info">
+    <h2>Even more about me</h2>
+    <a href="/resume.html"><h3><img src="/static/img/analyst.png">My Resume<img src="/static/img/work.png"></h3></a>
+    <a href="/portfolio.html"><h3><img src="/static/img/programming.png">Portfolio<img src="/static/img/cloud.png"></h3></a>
 </div>
 {% endblock content %}
 {% block css %}

@@ -33,10 +33,14 @@ nav>a:hover{
 }
 
 body>footer {
-    height: 35px;
+    height: 45px;
     background-color: #dcdcdc;
-    font-weight: bold;
-    padding: 0.8em 10% 0;
+    padding: 2em 10%;
+    font-size: 14px;
+}
+
+body>footer>#app-version{
+    float: right;
 }
 
 #main-content{
