@@ -6,7 +6,7 @@
     <div id="description" class="flex-section">
         <img src="/static/img/personal-web.png" alt="Personal Website" id="main-img">
         <div class="flex-break"></div>
-        <div class="flex-text">
+        <div>
             <h3>Description</h3>
             <p>A static site to work as online resume for people to know me and the backbone of my auto-deployment
                 architecture. Also, this makes my website a recursive website. Which I think it's pretty cool to say.</p>
@@ -18,7 +18,7 @@
     <div id="explanation" class="flex-section">
         <img src="/static/img/personal-web-diagram.jpg" alt="Diagram" id="diagram">
         <div class="flex-break"></div>
-        <div class="flex-text">
+        <div>
             <ol>
                 <li>A commit to the CodeCommit repository master branch triggers the CodePipeline workflow.</li>
                 <li>CodeBuild transforms the templates into the static html files. Also css and js is minified to reduce storage
@@ -50,7 +50,7 @@
 <div class="section">
     <h3>Why did I make a static website in 2020?</h3>
     <p>
-        Nowdays, with frameworks like Flak or Express.js, one can make a dynamic website in mere minutes, literally. All
+        Nowdays, with frameworks like Flask or Express.js, one can make a dynamic website in mere minutes, literally. All
         with templates and fetching data from some database.
         So, why doing a static website today? It sounds so vintage sometimes. But people sometimes forget the strengths of
         static websites and underestimate the costs of keeping
@@ -62,28 +62,29 @@
         available. A dynamic website running 24/7/52 would mean having (at least) one EC2 instance running an application
         all that time, something which consumes all of
         the free tier credit for EC2 (making anything else I do over the month with EC2 cost money) or adds like $8 a month
-        to my costs. I could also go serverless and use Lambda,
+        to my costs. And that's not even mentioning auto scaling in case of high demand. I could also go serverless and use Lambda,
         but I also want to play with it and use Lambda for many other things where serverless actually excells, and using it
         to handle the backend for this website would mean I
         risk going over my free tier limit too.
     </p>
     <p>
         Regardless of that, the main question is the following: Is the content static or dynamic? The answer is kind of
-        relative. But the site content will definetly change over time. I will add new projects, update existing ones, and probably change
+        relative. The site content will definetly change over time. I will add new projects, update existing ones, and probably change
         some things in the Home and Resume sections. But all of those changes will be done by me, both the sole owner of the
         site and someone who likes to write documents in HTML.
         Also, almost no information appears in two places of the site, using placeholders to insert that data would help
         very little. So, if I made this site dynamic, I would earn
         the ability to edit (some of) its content in a "friendlier" UI and maybe some data won't be duplicated. On the
         other hand, I'm getting the trouble of mantaining a backend
-        to serve the site, and that comes not only with costs, but with security precautions too.
+        to serve the site, and that comes not only with costs, but with security implications too.
     </p>
     <p>
         So I choosed to make the site static. AWS offers the ability to serve a static website straigth from a S3 bucket and
         the only things that you get charged for are the storage
         it uses, the GET requests it performs, and the PUT requests I perform. Additionally, CloudFront helps to make the
         site quick and available in other parts of the world for
-        international visitors.
+        international visitors. Security is also handled by AWS, I just have to set up the bucket's policy to the standard
+        for hosting a public static website and I won't have to worry who has access to what of my site.
     </p>
     <ul>
         <li>
@@ -129,7 +130,7 @@
         I love learning about technology. But learning a new framework is usually pretty cumbersome, while SSG aren't
         exactly very exciting to learn (at least for me). I never used one before making this site, all
         of my experience making websites was with dynamic websites or literally one page. So I went to the Internet looking
-        what SSG I should use, how to use them and so on. I started a Hugo tutorial
+        what SSG should I use, how to use them and so on. I started a Hugo tutorial
         and began scaffolding this page but, while I was reading documentation I tought "Why can't I use something like
         Jinja in Flask, that takes some templates and outputs the html files like that?".
         So I googled "static site generator jinja" and one of the first links was the <a

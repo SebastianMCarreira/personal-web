@@ -53,6 +53,10 @@ body>footer>#app-version{
     text-decoration: underline;
 }
 
+ul, ol{
+    margin-left: -20px
+}
+
 @media screen and (max-width:750px){
     nav>a{
         margin-right: 10px;

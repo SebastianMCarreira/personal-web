@@ -26,6 +26,10 @@
     padding: 5px 10px;
 }
 
+.project>div>p{
+    font-weight: normal;
+}
+
 .flex-break{
     flex-basis: 10%;
     height: 20px;
