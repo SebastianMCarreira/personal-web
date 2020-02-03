@@ -28,17 +28,22 @@ blockquote{
 }
 
 #diagram{
-    width: 615px;
-    height: 420px;
+    width: 45vw;
+    height: 30vw;
 }
 
-@media screen and (max-width:1300px){
+@media screen and (max-width:1000px){
     .flex-section{
         flex-wrap: wrap;
     }
     .flex-break{
         flex-basis: 100%;
         height: 10px;
+    }
+    #diagram{
+        width: 85vw;
+        height: auto;
+        max-width: 85vw;
     }
 }
 

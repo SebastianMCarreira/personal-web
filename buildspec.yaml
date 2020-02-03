@@ -1,7 +1,7 @@
 version: 0.2
 env:
   variables:
-     APPVERSION: "v0.2.2"
+     APPVERSION: "v1.0.0"
      OUTPATH: "."
      SITEPATH: ""
 phases:
@@ -14,6 +14,7 @@ phases:
        - pip install -r requirements.txt
   build:
     commands:
+       - echo Building static files
        - python3 loader.py
   post_build:
     commands:
