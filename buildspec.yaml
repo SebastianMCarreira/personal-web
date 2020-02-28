@@ -1,7 +1,7 @@
 version: 0.2
 env:
   variables:
-     APPVERSION: "v1.0.0"
+     APPVERSION: "v1.1.0"
      OUTPATH: "."
      SITEPATH: ""
 phases:
