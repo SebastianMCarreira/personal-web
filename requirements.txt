@@ -1,6 +1,7 @@
 argh==0.26.2
 certifi==2018.8.24
 chardet==3.0.4
+csscompressor==0.9.5
 docopt==0.6.2
 easywatch==0.0.5
 idna==2.7
