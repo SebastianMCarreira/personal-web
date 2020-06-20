@@ -1,7 +1,7 @@
 from staticjinja import Site
 import os
 
-OUTPATH = os.environ.get("OUTPATH",default="C:\inetpub\wwwroot")
+OUTPATH = os.environ.get("OUTPATH",default="/var/www/html")
 APPVERSION = os.environ.get("APPVERSION",default="testBuild")
 
 if __name__ == "__main__":
