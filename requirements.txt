@@ -9,7 +9,7 @@ MarkupSafe==1.1.1
 pathtools==0.1.2
 pkginfo==1.4.2
 PyYAML==5.3
-requests==2.19.1
+requests==2.20.0
 requests-toolbelt==0.8.0
 staticjinja==0.3.5
 tqdm==4.25.0
