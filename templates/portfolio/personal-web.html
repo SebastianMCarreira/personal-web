@@ -8,13 +8,12 @@
         <div class="flex-break"></div>
         <div>
             <h3>Description</h3>
-            <p>A static site to work as online resume for people to know me and the backbone of my auto-deployment
-                architecture. Also, this makes my website a recursive website. Which I think it's pretty cool to say.</p>
+            <p>A static site to work as online resume for people to know me. Also, this makes my website a recursive website. Which I think it's a pretty cool to say.</p>
         </div>
     </div>
 </div>
 <div class="section">
-    <h3>How it works</h3>
+    <h3>How it's deployed</h3>
     <div id="explanation" class="flex-section">
         <img src="/static/img/personal-web-diagram.jpg" alt="Diagram" id="diagram">
         <div class="flex-break"></div>
@@ -22,7 +21,7 @@
             <ol>
                 <li>A commit to the CodeCommit repository master branch triggers the CodePipeline workflow.</li>
                 <li>CodeBuild transforms the templates into the static html files. Also css and js is minified to reduce storage
-                    footprint.</li>
+                    footprint and page load time.</li>
                 <li>CodeDeploy sends the static files to the bucket test.sebastiancarreira.com where it's served as a S3 static
                     website.</li>
                 <li>I manually check the test website for errors in the public bucket URL. Once everything is checked, the pipeline
@@ -45,6 +44,7 @@
         <li>S3</li>
         <li>CodePipeline</li>
         <li>StaticJinja</li>
+        <li>Apache (for local development tests)</li>
     </ul>
 </div>
 <div class="section">
@@ -81,10 +81,11 @@
     <p>
         So I choosed to make the site static. AWS offers the ability to serve a static website straigth from a S3 bucket and
         the only things that you get charged for are the storage
-        it uses, the GET requests it performs, and the PUT requests I perform. Additionally, CloudFront helps to make the
+        it uses, the GET requests users perform, and the PUT requests I perform. Additionally, CloudFront helps to make the
         site quick and available in other parts of the world for
         international visitors. Security is also handled by AWS, I just have to set up the bucket's policy to the standard
-        for hosting a public static website and I won't have to worry who has access to what of my site.
+        for hosting a public static website and I won't have to worry who has access to what of my site (other than the security
+        concerns of managing an AWS account).
     </p>
     <ul>
         <li>
