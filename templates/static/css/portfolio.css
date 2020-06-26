@@ -20,6 +20,7 @@
 .project>img{
     width: 100%;
     border-bottom: #aaa solid 2px;
+    max-height: 64%;
 }
 
 .project>div{

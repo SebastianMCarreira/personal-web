@@ -27,12 +27,12 @@ blockquote{
     height: 10px;
 }
 
-#diagram{
+/* #diagram{
     width: 45vw;
     height: 30vw;
-}
+} */
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1400px){
     .flex-section{
         flex-wrap: wrap;
     }
